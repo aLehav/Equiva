@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="shopApp">
     <head>
         <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home Page</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home Page</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+        <script src="../views/shopApp/shopApp.js"></script>
+        <script src="../views/shopApp/shopCtrl.js"></script>
     </head>
-    <body>
+    <body ng-controller="shopCtrl">
         <div class="title is-1">
             example of a title
+        </div>
+        <div>
+            {{items}}
+            {{testVar}}
         </div>
     </body>
 </html>
