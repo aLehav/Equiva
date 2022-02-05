@@ -4,7 +4,6 @@
     "repository": "https://github.com/aLehav/HackSC2022-JAARS",
     "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/main/public/node.svg",
     "start_url": "https://hacksc2022-jaars.herokuapp.com/",
-    "keywords": ["node", "express", "heroku"],
-    "image": "heroku/nodejs"
+    "keywords": ["node", "express", "heroku"]
   }
   
