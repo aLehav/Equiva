@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="shopApp">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,13 +8,28 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
-        <script src="../views/shopApp/shopApp.js"></script>
-        <script src="../views/shopApp/shopCtrl.js"></script>
+        <script src="shopApp/shopApp.js"></script>
+        <script src="shopApp/shopCtrl.js"></script>
     </head>
-    <body ng-controller="shopCtrl">
+    <body ng-app="shopApp" ng-controller="shopCtrl" ng-init="initPage()">
         <div class="title is-1">
             example of a title
         </div>
+        <div class="box" ng-repeat="x in items">
+            Product: {{x.name}}
+            Size: {{x.weight}}
+            <a href="{{x.charity}}">DONATE:{{x.rate*x.weight}}</a>
+        </div>
+        <div class="columns">
+            <div class="column" ng-repeat="y in contributors">
+                    Name: {{y.name}}
+                    Major: {{y.major}}
+            </div>
+        </div>
+        <button class="is-primary" ng-click="sumAges(contributors,sum)">
+            Age: {{contributors[1].age+contributors[2].age}}
+            SUM: {{sum}}
+        </button>
         <div>
             {{items}}
             {{testVar}}
