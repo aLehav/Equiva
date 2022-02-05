@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Home Page</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
@@ -12,6 +14,58 @@
         <script src="shopApp/shopCtrl.js"></script>
     </head>
     <body ng-app="shopApp" ng-controller="shopCtrl" ng-init="initPage()">
+        <div class="navbar is-info is-size-4 is-large">
+            <!--navbar-brand contains brand-->
+            <!--navbar-menu is right side-->
+            <!--navbar-start is start, end is end-->
+            <!--navbar-items can be navbar-link, navbar-dropdown, navbar-divider-->
+            <div class="navbar-brand">
+                <a class="navbar-item" href="./">
+                    <img src="fillerImg.jpg">
+                </a>
+            </div>
+
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item">
+                        Home
+                    </a>
+                    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Partnered Organizaitons
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item">
+                                Businesses
+                            </a>
+                            <a class="navbar-item">
+                                Charities
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a class="navbar-item">
+                        Future Steps
+                    </a>
+                </div>
+                <div class="navbar-end">
+                    <div class="navbar-item field">
+                        <div class="control has-icons-left">
+                            <input class="input" type="search" placeholder="Search">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <a class="navbar-item">
+                        <img src="shoppingCart.png">
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="title is-1">
             example of a title
         </div>
@@ -30,9 +84,5 @@
             Age: {{contributors[1].age+contributors[2].age}}
             SUM: {{sum}}
         </button>
-        <div>
-            {{items}}
-            {{testVar}}
-        </div>
     </body>
 </html>
