@@ -1,5 +1,6 @@
 shopApp.controller("shopCtrl",function($scope){
     $scope.allItems = [];
+    //create new array
     $scope.searchTerm = "";
 
     $scope.initPage = function(){
@@ -26,12 +27,15 @@ shopApp.controller("shopCtrl",function($scope){
             })
             $scope.$apply();
         });
+        //create new query thing, but instead of products collection its charities or businesses
+        //propogate associated array
     }
 
     $scope.search = function(event){
         if(event.key == "Enter"){
             $scope.searchTerm = $scope.searchTemp;
             $scope.searchTemp="";
+            path('/search');
         }
         $scope.refreshList();
     }
