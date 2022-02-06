@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Home Page</title>
+        <title>Equiva</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
         <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
 
@@ -57,7 +57,7 @@
                 <div class="navbar-end">
                     <div class="navbar-item field">
                         <div class="control has-icons-left">
-                            <input class="input" type="search" placeholder="Search" ng-model="searchTerm" (keydown.enter)="search()">
+                            <input class="input" type="search" placeholder="Search" ng-model="searchTemp" ng-keydown="search($event)">
                             <span class="icon is-small is-left">
                                 <i class="fas fa-search"></i>
                             </span>

@@ -8,6 +8,9 @@ font locally downloaded or not-->
 
 <div ng-init="printAllItems()" ng-repeat="item in allItems" class="box">
     {{item.Charity}}
+<div ng-init="printAllItems()" ng-repeat="item in allItems" class="box">
+    <a href="{{item.Charity}}">Donate!</a>
+    {{item.Name}}
 </div>
 
 <div style = "background-color: #CB9F7E">
