@@ -1,8 +1,6 @@
 shopApp.controller("shopCtrl",function($scope){
     $scope.allItems = [];
     //create new array
-    $scope.allCharities = [];
-    $scope.allBusinesses = [];
     $scope.searchTerm = "";
 
     $scope.initPage = function(){
@@ -31,28 +29,6 @@ shopApp.controller("shopCtrl",function($scope){
         });
         //create new query thing, but instead of products collection its charities or businesses
         //propogate associated array
-        $scope.db.collection("Charities").get().then((querySnapshot) => {
-            $scope.allCharities = [];
-            querySnapshot.forEach((doc) => {
-                var temp = doc.data();
-                temp.id = doc.id;
-                $scope.allCharities.push(temp);
-                // doc.data() is never undefined for query doc snapshots
-                //console.log(doc.id, " => ", doc.data());
-            })
-            $scope.$apply();
-        });
-        $scope.db.collection("Businesses").get().then((querySnapshot) => {
-            $scope.allBusinesses = [];
-            querySnapshot.forEach((doc) => {
-                var temp = doc.data();
-                temp.id = doc.id;
-                $scope.allBusinesses.push(temp);
-                // doc.data() is never undefined for query doc snapshots
-                //console.log(doc.id, " => ", doc.data());
-            })
-            $scope.$apply();
-        });
     }
 
     $scope.search = function(event){
