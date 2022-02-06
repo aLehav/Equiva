@@ -1,3 +1,25 @@
-<div class="title is-1">
-    SUCCESS
-</div>BIZNIZ
+<div style="background-color: #EAF4E7;">
+    <br>
+<br>
+<div ng-repeat="charity in allBusinesses" class="box" style="display:inline-block; width: 23%; vertical-align: top; margin: 1%; background-color: #FDF5F5;">
+    <!-- CARD -->
+    <a ng-href="{{charity.Link}}">
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-square is-fullwidth">
+                    <img
+                        src="{{charity.ImageLink}}"
+                        alt="Placeholder image"
+                    />
+                </figure>
+            </div>
+            <div class="card-content" style="background-color: #ffe880;">
+                <div class="content">
+
+                    <p class="title is-4">{{charity.Company}}</p>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+</div>
