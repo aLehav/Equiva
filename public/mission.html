@@ -1,5 +1,27 @@
-<h1 style = "color:#F4E9E9; text-align: center; font-family: Comfortaa; font-size: 4em">OUR MISSION</h1>
-    <p style = "text-align: center; font-family: Comfortaa; color: #F4E9E9; font-size:1.75em">
-        Our Mission at Equiva is to provide more sustainable options, easily accessible and visible,
-        for all users. So you know you're making the best choice, and the environment thanks you too ^_^.
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">    
+</head>
+<!--this allows the Comfortaa font to show up on webpages regardless of if the user has the 
+font locally downloaded or not-->
+
+<div ng-init="printAllItems()" ng-repeat="item in allItems" class="box">
+    {{item.Charity}}
+</div>
+
+<div ng-init="printAllItems()" ng-repeat="item in allItems" class="box">
+    <a href="{{item.Charity}}">Donate!</a>
+    {{item.Name}}
+</div>
+
+<div style = "background-color: #CB9F7E">
+<h1 style = "color:#F4E9E9; text-align: center; font-size: 4em; font-family:Comfortaa;">OUR MISSION</h1>
+    <p style = "text-align: center; color: #F4E9E9; font-size:1.75em; font-family: Comfortaa;">
+        Our Mission at Equiva is to match consumers with the most environmentally conscientious and
+        sustainable items. So that you can feel good about your purchase, and the planet can too! 
+        We filter and sort the best options in terms of reduced carbon footprint, material sourcing, 
+        manufacturing ethics, and more. With each purchase made using Equiva, a donation is delivered 
+        to a corresponding charity, be it a dog shelter or an effort to replant trees. 
     </p>
+</div>
