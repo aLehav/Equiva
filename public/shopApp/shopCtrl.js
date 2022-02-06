@@ -4,6 +4,7 @@ shopApp.controller("shopCtrl",function($scope){
         {name:"Dog Food", weight:20, rate:0.02, charity:"https://www.google.com"}
     ];
     $scope.testVar = "Test";
+    $scope.message = "THIS IS THE MISSION PAGE"
     $scope.sum = 0;
     $scope.contributors = [
         {name:"Julia", major:"CECS", age: 18},
@@ -33,5 +34,17 @@ shopApp.controller("shopCtrl",function($scope){
         }
         $scope.sum = sumVar;
     }
+
+});
+
+shopApp.controller("bsnsCtrl",function($scope){
+
+});
+
+shopApp.controller("charityCtrl",function($scope){
+
+});
+
+shopApp.controller("futureCtrl",function($scope){
 
 });

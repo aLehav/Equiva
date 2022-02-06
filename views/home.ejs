@@ -7,11 +7,16 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
         <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
 
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script> 
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
 
         <script src="shopApp/shopApp.js"></script>
         <script src="shopApp/shopCtrl.js"></script>
+        <script src="shopApp/shopDirs.js"></script>
     </head>
     <body ng-app="shopApp" ng-controller="shopCtrl" ng-init="initPage()">
         <div class="navbar is-info is-size-4 is-large">
@@ -27,7 +32,7 @@
 
             <div id="navbarMenu" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="#!home">
                         Home
                     </a>
                     
@@ -37,16 +42,16 @@
                         </a>
 
                         <div class="navbar-dropdown">
-                            <a class="navbar-item">
+                            <a class="navbar-item" href="#!businesses">
                                 Businesses
                             </a>
-                            <a class="navbar-item">
+                            <a class="navbar-item" href="#!charities">
                                 Charities
                             </a>
                         </div>
                     </div>
                     
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="#!futureSteps">
                         Future Steps
                     </a>
                 </div>
@@ -66,23 +71,6 @@
                 </div>
             </div>
         </div>
-        <div class="title is-1">
-            example of a title
-        </div>
-        <div class="box" ng-repeat="x in items">
-            Product: {{x.name}}
-            Size: {{x.weight}}
-            <a href="{{x.charity}}">DONATE:{{x.rate*x.weight}}</a>
-        </div>
-        <div class="columns">
-            <div class="column" ng-repeat="y in contributors">
-                    Name: {{y.name}}
-                    Major: {{y.major}}
-            </div>
-        </div>
-        <button class="is-primary" ng-click="sumAges(contributors,sum)">
-            Age: {{contributors[1].age+contributors[2].age}}
-            SUM: {{sum}}
-        </button>
+        <div ng-view></div>
     </body>
 </html>

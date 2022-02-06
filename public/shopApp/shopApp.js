@@ -1,1 +1,1 @@
-var shopApp = angular.module("shopApp",[]);
+var shopApp = angular.module("shopApp",["ngRoute"]);
