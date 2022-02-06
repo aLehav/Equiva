@@ -11,12 +11,9 @@ shopApp.controller("shopCtrl",function($scope){
             authDomain: "jaars-hacksc2022.firebaseapp.com",
             projectId: "jaars-hacksc2022"
         });
-
         $scope.db = firebase.firestore();
-
         $scope.refreshList();
     }
-
     $scope.refreshList = function(){
         $scope.db.collection("Products").where("Tags","array-contains", $scope.searchTerm).get().then((querySnapshot) => {
             $scope.allItems = [];
@@ -56,27 +53,3 @@ shopApp.controller("shopCtrl",function($scope){
     }
 
     $scope.search = function(event){
-        if(event.key == "Enter"){
-            $scope.searchTerm = $scope.searchTemp;
-            $scope.searchTemp="";
-            document.getElementById("myAnch").click();
-        }
-        $scope.refreshList();
-    }
-});
-
-shopApp.controller("bsnsCtrl",function($scope){
-
-});
-
-shopApp.controller("charityCtrl",function($scope){
-
-});
-
-shopApp.controller("futureCtrl",function($scope){
-
-});
-
-shopApp.controller("searchCtrl",function($scope){
-
-});
