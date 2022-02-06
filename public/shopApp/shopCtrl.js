@@ -57,7 +57,7 @@ shopApp.controller("shopCtrl",function($scope){
 
     $scope.search = function(event){
         if(event.key == "Enter"){
-            $scope.searchTerm = $scope.searchTemp;
+            $scope.searchTerm = $scope.searchTemp.toLowerCase();
             $scope.searchTemp="";
             document.getElementById("myAnch").click();
         }

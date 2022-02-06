@@ -4,8 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Equiva</title>
+        <link rel="icon" type="image/x-icon" href="equivaE.png">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
         <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 
         <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script> 
@@ -16,9 +21,12 @@
         <script src="shopApp/shopApp.js"></script>
         <script src="shopApp/shopCtrl.js"></script>
         <script src="shopApp/shopDirs.js"></script>
+        <style>
+            div, input{
+                font-family: Comfortaa
+            }
+        </style>
     </head>
-    <body ng-app="shopApp" ng-controller="shopCtrl" ng-init="initPage()">
-        <div class="navbar is-info is-size-4 is-large">
     <body ng-app="shopApp" ng-controller="shopCtrl" ng-init="initPage()" style="background-color: #EAF4E7;">
         <div class="navbar is-size-4 is-large" style="background-color:#BCEEAB">
             <!--navbar-brand contains brand-->
