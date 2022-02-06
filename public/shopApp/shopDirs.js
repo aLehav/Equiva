@@ -2,7 +2,7 @@ shopApp.config(['$routeProvider',function($routeProvider){
     $routeProvider
 
     .when('/home',{
-        templateUrl: 'mission.html', controller: 'shopCtrl'
+        templateUrl: 'mission.html', controller: 'bsnsCtrl'
     })
     .when('/businesses',{
         templateUrl: 'businesses.html', controller: 'bsnsCtrl'

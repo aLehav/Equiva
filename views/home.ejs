@@ -13,7 +13,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 
-
         <script src="shopApp/shopApp.js"></script>
         <script src="shopApp/shopCtrl.js"></script>
         <script src="shopApp/shopDirs.js"></script>
@@ -58,7 +57,7 @@
                 <div class="navbar-end">
                     <div class="navbar-item field">
                         <div class="control has-icons-left">
-                            <input class="input" type="search" placeholder="Search">
+                            <input class="input" type="search" placeholder="Search" ng-model="searchTerm" (keydown.enter)="search()">
                             <span class="icon is-small is-left">
                                 <i class="fas fa-search"></i>
                             </span>

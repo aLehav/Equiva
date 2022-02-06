@@ -1,18 +1,7 @@
-<div class="title is-1">
-    example of a title
+<div class="box">
+    BOX 1
 </div>
-<div class="box" ng-repeat="x in items">
-    Product: {{x.name}}
-    Size: {{x.weight}}
-    <a href="{{x.charity}}">DONATE:{{x.rate*x.weight}}</a>
+<div ng-init="printAllItems()" ng-repeat="item in allItems" class="box">
+    {{item.Charity}}
+
 </div>
-<div class="columns">
-    <div class="column" ng-repeat="y in contributors">
-            Name: {{y.name}}
-            Major: {{y.major}}
-    </div>
-</div>
-<button class="is-primary" ng-click="sumAges(contributors,sum)">
-    Age: {{contributors[1].age+contributors[2].age}}
-    SUM: {{sum}}
-</button>
