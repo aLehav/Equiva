@@ -5,6 +5,20 @@
 </head>
 <!--this allows the Comfortaa font to show up on webpages regardless of if the user has the 
 font locally downloaded or not-->
+
+<div ng-init="printAllItems()" ng-repeat="item in allItems" class="box">
+    {{item.Charity}}
+</div>
+
+<div ng-init="printAllItems()" ng-repeat="item in allItems" class="box">
+    <a href="{{item.Charity}}">Donate!</a>
+    {{item.Name}}
+</div>
+
+<div style = "background-color: #CB9F7E; background-image: url(nature_watercolor_crop.png); background-size: 100%">
+<h1 style = "color:#F4E9E9; text-align: center; font-size: 4em; font-family:Comfortaa; padding-top: 5%">OUR MISSION</h1>
+    <p style = "text-align: center; padding-left: 5%; padding-right: 5%;
+    padding-bottom: 5%; padding-top: 2.5%; color: #F4E9E9; font-size:1.75em; font-family: Comfortaa;">
 <div style = "background-color: #CB9F7E">
 <h1 style = "color:#F4E9E9; text-align: center; font-size: 4em; font-family:Comfortaa;">OUR MISSION</h1>
     <p style = "text-align: center; color: #F4E9E9; font-size:1.75em; font-family: Comfortaa;">
@@ -13,5 +27,12 @@ font locally downloaded or not-->
         We filter and sort the best options in terms of reduced carbon footprint, material sourcing, 
         manufacturing ethics, and more. With each purchase made using Equiva, a donation is delivered 
         to a corresponding charity, be it a dog shelter or an effort to replant trees. 
+    </p>
+</div>
+
+<div style = "background-color: #A9754D">
+<h1 style = "color:#C0A998; text-align: center; font-size: 4em; font-family:Comfortaa;">STATISTICS</h1>
+    <p style = "text-align: left; padding-left: 7.5%; color: #C0A998; font-size:1.75em; font-family:Comfortaa;">
+    99.422&#x1F30E;% Customer Satisfaction Rate
     </p>
 </div>
