@@ -1,6 +1,43 @@
 <div ng-init="printAllItems()" ng-repeat="item in allItems" class="box">
     <a href="{{item.Charity}}">Donate!</a>
     {{item.Name}}
+<div style="background-color: #EAF4E7">
+    <br>
+    <h1 style = "color:#56463C; text-align: center; font-family: Comfortaa; font-size: 4em;margin-top: 3%;">
+        RESULTS FOR
+    </h1>
+    
+    <div class="box is-centered is-primary" style="width:90%; background-color: #FDF5F5; margin: auto;">
+        <p style="text-align: left; font-family: Comfortaa; color: #56463C; font-size:3em">
+            &nbsp{{searchTerm}}
+        </p>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <div ng-repeat="item in allItems">
+        <div class="box is-centered is-primary" style="width:90%; background-color: #FDF5F5; margin: auto;">
+            <div style="display:inline-block; vertical-align:top;">
+                <figure class="image is-128x128">
+                    <img src="{{item.Image}}">
+                </figure>
+                <!--<img src= style="padding-left:127px; width:150px;height:150px;">-->
+            </div>
+            <div style="display:inline-block;">
+                <p style = "padding-left:10px; text-align: left; font-family: Comfortaa; color: #56463C; font-size:1.5em">
+                    &nbsp {{item.Name}} - ${{item.Cost}}
+                </p>
+                <p style = "padding-left:10px; text-align: left; font-family: Comfortaa; color: #8E542A; font-size:1em">
+                    &nbsp {{item.Description}}
+                </p>
+                <p style = "padding-left:10px; text-align: left; font-family: Comfortaa; color: #56463C; font-size:1.5em">
+                    &nbsp Size: {{item.Weight}} {{item.Metric}} &nbsp&nbsp&nbsp Rate: ${{item.DPW}} / {{item.Metric}} &nbsp&nbsp&nbsp <a ng-href="{{item.Charity}}">Charity</a>
+                </p>
+            </div>
+        </div>
+        <br>
+    </div>
 </div>
 THIS IS SEARCH
 
