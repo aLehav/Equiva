@@ -1,5 +1,4 @@
-shopApp.config(['$locationProvider','$routeProvider', function($locationProvider, $routeProvider){
-    $locationProvider.hashPrefix('!');
+shopApp.config(['$routeProvider', function($routeProvider){
     $routeProvider
 
     .when('/home',{
