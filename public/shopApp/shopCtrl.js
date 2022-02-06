@@ -1,5 +1,7 @@
 shopApp.controller("shopCtrl",function($scope){
     $scope.allItems = [];
+    $scope.searchTerm = "";
+
     $scope.initPage = function(){
         firebase.initializeApp({
             apiKey: "AIzaSyClvvkrM0wNzjj6vvZ4flOzJR7I5qbA-9s",
@@ -13,7 +15,7 @@ shopApp.controller("shopCtrl",function($scope){
     }
 
     $scope.refreshList = function(){
-        $scope.db.collection("Products").get().then((querySnapshot) => {
+        $scope.db.collection("Products").where("Tags","array-contains", $scope.searchTerm).get().then((querySnapshot) => {
             $scope.allItems = [];
             querySnapshot.forEach((doc) => {
                 var temp = doc.data();
@@ -26,14 +28,12 @@ shopApp.controller("shopCtrl",function($scope){
         });
     }
 
-    $scope.search = function(){
-        $scope.searchTerm="";
+    $scope.search = function(event){
+        if(event.key == "Enter"){
+            $scope.searchTerm = $scope.searchTemp;
+            $scope.searchTemp="";
+        }
         $scope.refreshList();
-    }
-
-    $scope.printAllItems = function(){
-        console.log($scope.allItems);
-        console.log("FUCK THIS");
     }
 });
 
@@ -46,5 +46,9 @@ shopApp.controller("charityCtrl",function($scope){
 });
 
 shopApp.controller("futureCtrl",function($scope){
+
+});
+
+shopApp.controller("searchCtrl",function($scope){
 
 });
