@@ -35,7 +35,7 @@ shopApp.controller("shopCtrl",function($scope){
         if(event.key == "Enter"){
             $scope.searchTerm = $scope.searchTemp;
             $scope.searchTemp="";
-            path('/search');
+            document.getElementById("myAnch").click();
         }
         $scope.refreshList();
     }

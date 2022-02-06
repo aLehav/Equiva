@@ -1,4 +1,5 @@
-shopApp.config(['$routeProvider',function($routeProvider){
+shopApp.config(['$locationProvider','$routeProvider', function($locationProvider, $routeProvider){
+    $locationProvider.hashPrefix('!');
     $routeProvider
 
     .when('/home',{
@@ -14,7 +15,7 @@ shopApp.config(['$routeProvider',function($routeProvider){
         templateUrl: 'future.html', controller: 'futureCtrl'
     })
     .when('/search',{
-        templateUrl: 'search.html', controller: 'SearchCtrl'
+        templateUrl: 'search.html', controller: 'searchCtrl'
     })
     .otherwise({
         redirectTo: '/home'
